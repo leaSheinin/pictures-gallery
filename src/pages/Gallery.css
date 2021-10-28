@@ -1,0 +1,16 @@
+
+.gallery {
+    display: grid;
+    grid-template-rows: auto;
+
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 15px;
+}
+
+.picture {
+    display: inline-block;
+}

@@ -1,0 +1,17 @@
+.picturePresenter {
+    /* border: 3px, solid, rebeccapurple; */
+    border: solid;
+    border-color: #f177cc;
+    border-width: 3px;
+    border-radius: 5px;
+    width: 350px;
+    height: 350px;
+    display: inline-block;
+    margin: 6px;
+    padding-top: 20px;
+}
+
+.div {
+    font-size: 14pt;
+    color: #c70c96;
+}
