@@ -30,13 +30,12 @@ export default function Gallery() {
 
     const setPicturesSrcState = async () => {
         let picturesSrcArray = [];
-        let updatesrcArray = [];
         for (let index = 0; index < 30; index++) {
             const pictureData = await getPicture();
-            updatesrcArray = [...picturesSrcArray, picturesSrcArray.push(pictureData)];
-            setPicturesSrc(updatesrcArray);
-            setStoredPicturesSrc(updatesrcArray);
+            picturesSrcArray.push(pictureData)
         }
+        setPicturesSrc(picturesSrcArray);
+        setStoredPicturesSrc(picturesSrcArray);
     }
 
     useEffect(() => {
@@ -63,7 +62,7 @@ export default function Gallery() {
                 />
             </div>
             <div className="pictureGrid">
-                {picturesSrc.map((pictureSrc, index) =>
+                {picturesSrc.length === 0 ? <label className="loading">loading pictures...</label> : picturesSrc.map((pictureSrc, index) =>
                     <PicturePresenter
                         key={index}
                         pictureSrc={pictureSrc.url}
